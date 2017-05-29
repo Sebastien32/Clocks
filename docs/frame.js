@@ -84,7 +84,8 @@ function displayTime() {
     if(hours <= 9) hours = '0' + hours;
     if(minutes <= 9) minutes = '0' + minutes;
     if(seconds <= 9) seconds = '0' + seconds;
-
+    if(millieconds <= 9) milliseconds = '0' + milliseconds;
+    if(milliseconds <= 99) milliseconds = '0' + milliseconds;
     colorhex = "#" + hours + minutes + seconds;
     colortext = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
     //set background color
@@ -93,7 +94,7 @@ function displayTime() {
     document.getElementById("hex").innerHTML = colortext;
 
     //retrigger the function every second
-    setTimeout(displayTime, 10);
+    setTimeout(displayTime, 100);
 }
 //call the function
 displayTime();
