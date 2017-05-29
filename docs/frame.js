@@ -15,7 +15,7 @@ function displayTime() {
     if(m <= 9) m = '0' + m;
     if(s <= 9) s = '0' + s;
 
-    color = h + ":" + m + ":" + s;
+    color = "#" + h + m + s;
     //set background color
     document.body.style.background = color;
     //set time
