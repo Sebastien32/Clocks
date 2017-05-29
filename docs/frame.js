@@ -76,14 +76,14 @@ function displayTime()
     // Set colortext variable to the display text
     colortext = hours + ":" + minutes + ":" + seconds;
     // Set the red value to the current proportion of a day passed
-    red = milliseconds + (1000 * seconds) + (60000 * minutes) + (3600000 * hours) / (86400000) * 256;
-    red = round(red);
+    red = (milliseconds + (1000 * seconds) + (60000 * minutes) + (3600000 * hours)) * 256 / (86400000);
+    red = Math.round(red);
     // Set the green value to the current proportion of an hour passed
-    green = milliseconds + (1000 * seconds) + (60000 * minutes) / (3600000) * 256;
-    green = round(green);
+    green = (milliseconds + (1000 * seconds) + (60000 * minutes)) / (3600000) * 256;
+    green = Math.round(green);
     // Set the blue value to the current proportion of a minute passed
-    blue = milliseconds + (1000 * seconds) / (60000) * 256;
-    blue = round(blue);
+    blue = (milliseconds + (1000 * seconds)) / (60000) * 256;
+    blue = Math.round(blue);
     // Convert RBG values to hexadecimal
     hexRed = red.toString(16);
     hexGreen = green.toString(16);
@@ -93,8 +93,6 @@ function displayTime()
     if(green <= 15) hexGreen = '0' + hexGreen;
     if(blue <= 15) hexBlue = '0' + hexBlue;
     colorhex = "#" + hexRed + hexGreen + hexBlue;
-    //set background color
-    document.body.style.background = colorhex;
     //set time
     document.getElementById("hex").innerHTML = colortext;
 
