@@ -79,7 +79,7 @@ function displayTime() {
     hours = d.getHours();
     minutes = d.getMinutes();
     seconds = d.getSeconds();
-    milliseconds = d.getMilliseconds;
+    milliseconds = d.getMilliseconds();
     //add zero to the left of the numbers if they are single digits
     if(hours <= 9) hours = '0' + hours;
     if(minutes <= 9) minutes = '0' + minutes;
