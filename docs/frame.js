@@ -76,10 +76,10 @@ var blue;
 var hexBlue;
 function displayTime() {
     date = new Date(); //new data object
-    hours = d.getHours();
-    minutes = d.getMinutes();
-    seconds = d.getSeconds();
-    milliseconds = d.getMilliseconds();
+    hours = date.getHours();
+    minutes = date.getMinutes();
+    seconds = date.getSeconds();
+    milliseconds = date.getMilliseconds();
     //add zero to the left of the numbers if they are single digits
     if(hours <= 9) hours = '0' + hours;
     if(minutes <= 9) minutes = '0' + minutes;
