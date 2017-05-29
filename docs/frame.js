@@ -75,18 +75,18 @@ var hexGreen;
 var blue;
 var hexBlue;
 function displayTime() {
-    d = new Date(); //new data object
-    h = d.getHours();
-    m = d.getMinutes();
-    s = d.getSeconds();
+    date = new Date(); //new data object
+    hours = d.getHours();
+    minutes = d.getMinutes();
+    seconds = d.getSeconds();
     milliseconds = d.getMilliseconds;
     //add zero to the left of the numbers if they are single digits
-    if(h <= 9) h = '0' + h;
-    if(m <= 9) m = '0' + m;
-    if(s <= 9) s = '0' + s;
+    if(hours <= 9) hours = '0' + hours;
+    if(minutes <= 9) minutes = '0' + minutes;
+    if(seconds <= 9) seconds = '0' + seconds;
 
-    colorhex = "#" + h + m + s;
-    colortext = h + ":" + m + ":" + s + "." + milliseconds;;
+    colorhex = "#" + hours + minutes + seconds;
+    colortext = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
     //set background color
     document.body.style.background = colorhex;
     //set time
