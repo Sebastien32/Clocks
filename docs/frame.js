@@ -3,7 +3,8 @@ var d;
 var h;
 var m;
 var s;
-var color;
+var colorhex;
+var colortext;
 function displayTime() {
     d = new Date(); //new data object
     h = d.getHours();
@@ -15,11 +16,12 @@ function displayTime() {
     if(m <= 9) m = '0' + m;
     if(s <= 9) s = '0' + s;
 
-    color = "#" + h + m + s;
+    colorhex = "#" + h + m + s;
+    colortext = h + ":" + m + ":" + s;
     //set background color
-    document.body.style.background = color;
+    document.body.style.background = colorhex;
     //set time
-    document.getElementById("hex").innerHTML = color;
+    document.getElementById("hex").innerHTML = colortext;
 
     //retrigger the function every second
     setTimeout(displayTime, 1000);
